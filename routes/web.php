@@ -2,6 +2,11 @@
 
 use App\Http\Controllers\admin\AdminLoginController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +20,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get("/", [HomeController::class,"index"])->name('index.home');
+Route::get("/about-us", [HomeController::class,"about"])->name('index.about');
+
+Route::get('/services',[ServicesController::class,'index'])->name('index.services');
+Route::get('/faq',[FaqController::class,'index'])->name('index.faq');
+Route::get( '/blog',[BlogController::class,'index'])->name('index.blog');
+Route::get('/contact',[ContactController::class,'index'])->name('index.contact');
+
+
 
 Route::group(['prefix'=> 'admin'], function () {
 
