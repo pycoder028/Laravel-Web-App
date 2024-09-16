@@ -12,18 +12,18 @@
 Here I am using laravel and bootstrap. 
 
 ## Frontend Features (Website)
-Home
-About Us
-Services
-Faq
-Blog
+Home |
+About Us |
+Services |
+Faq |
+Blog |
 Contact
 
 
 ## Backend Features (Admin Panel)
-Login Screen
-Settings
-Pages
-Services
-Faq
+Login Screen |
+Settings |
+Pages |
+Services |
+Faq |
 Blog
